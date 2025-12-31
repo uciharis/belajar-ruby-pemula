@@ -146,6 +146,7 @@
 # contoh lain
 
 class Dragon
+
   def initialize name
     @name = name
     @asleep = false
@@ -153,39 +154,45 @@ class Dragon
     @stuffInIntestine = 0
     puts @name + ' is born'
   end
+
   def feed
     puts 'you feed ' + @name
-    @stuffInBelly = 0
+    @stuffInBelly = 10
     passageOfTime
   end
+
   def walk
-    puts 'you walk' + @name
+    puts 'you walk ' + @name
     @stuffInIntestine = 0
     passageOfTime
   end
+
   def putToBed
-    puts 'you put' + @name + 'to bed'
+    puts 'you put ' + @name + ' to bed'
     @asleep = true
     3.times do
       if @asleep
         passageOfTime
       end
       if @asleep
-        puts @name + 'snores, filling the room in smoke'
+        puts @name + ' snores, filling the room in smoke'
       end
     end
+
   if @asleep
     @asleep = false
     puts @name + ' wake up slowly'
   end
   end
+
   def toss
-    puts 'you toss' + @name + 'up into air'
+    puts 'you toss ' + @name + ' up into air'
     puts 'he giggles, since hinges your eyebrows'
     passageOfTime
   end
+
   def rock
-    puts 'you rock' + @name + 'gently'
+    puts 'you rock ' + @name + ' gently'
     @asleep = true
     puts 'he briefly dozes off ... '
     passageOfTime
@@ -199,28 +206,31 @@ class Dragon
   def hungry?
     @stuffInBelly <= 2
   end
+
   def poopy?
-  @stufInIntestine >= 8
+  @stuffInIntestine >= 8
   end
-def passageOfTime
-  if @stuffInBelly > 0
+
+  def passageOfTime
+    if @stuffInBelly > 0
     @stuffInBelly -= 1
     @stuffInIntestine += 1
-  else
+    else
     if @asleep
     @asleep = false
       puts 'he awakes suddenly'
     end
     puts @name + ' is starving. he ates you'
     exit
-  end
-  if hungry?
+    end
+    
+    if hungry?
     if @asleep
     @asleep = false
       puts 'he wakes up suddenly'
     end
-    puts @name + '\s stomach grumbles ...'
-  end
+    puts @name + '\'s stomach grumbles ...'
+    end
 
   if poopy?
     if @asleep
@@ -229,7 +239,8 @@ def passageOfTime
     end
     puts @name + ' does the potty dance'
   end
-end
+  end
+
 end
 
 nagaJalang = Dragon.new 'okowi'
