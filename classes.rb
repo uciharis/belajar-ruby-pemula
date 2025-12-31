@@ -15,16 +15,16 @@
 # puts Time.mktime(1976,8,3,10,11,12)
 
 # Array dan Hash
-color_array = []
-color_hash = {}
-
-color_array[0] = 'pisang'
-color_array[1] = 'jambu'
-puts color_array.to_s
-
-color_array.each do |color|
-  puts color.to_s
-end
+# color_array = []
+# color_hash = {}
+#
+# color_array[0] = 'pisang'
+# color_array[1] = 'jambu'
+# puts color_array.to_s
+#
+# color_array.each do |color|
+#   puts color.to_s
+# end
 
 # color_hash['strings'] = 'red'
 # color_hash['numbers'] = 'green'
@@ -151,10 +151,10 @@ class Dragon
     @asleep = false
     @stuffInBelly = 10
     @stuffInIntestine = 0
-    puts @name + 'is born'
+    puts @name + ' is born'
   end
   def feed
-    puts 'you feed' + name
+    puts 'you feed ' + @name
     @stuffInBelly = 0
     passageOfTime
   end
@@ -176,7 +176,7 @@ class Dragon
     end
   if @asleep
     @asleep = false
-    puts @name + 'wake up slowly'
+    puts @name + ' wake up slowly'
   end
   end
   def toss
@@ -207,14 +207,16 @@ def passageOfTime
     @stuffInBelly -= 1
     @stuffInIntestine += 1
   else
-    if @asleep = false
+    if @asleep
+    @asleep = false
       puts 'he awakes suddenly'
     end
-    puts @name + 'is starving. he ates you'
+    puts @name + ' is starving. he ates you'
     exit
   end
   if hungry?
-    if @asleep = false
+    if @asleep
+    @asleep = false
       puts 'he wakes up suddenly'
     end
     puts @name + '\s stomach grumbles ...'
@@ -229,3 +231,13 @@ def passageOfTime
   end
 end
 end
+
+nagaJalang = Dragon.new 'okowi'
+nagaJalang.feed
+nagaJalang.toss
+nagaJalang.walk
+nagaJalang.putToBed
+nagaJalang.rock
+nagaJalang.putToBed
+nagaJalang.putToBed
+nagaJalang.putToBed
