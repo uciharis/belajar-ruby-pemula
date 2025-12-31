@@ -201,7 +201,7 @@ class Dragon
   end
   def poopy?
   @stufInIntestine >= 8
-end
+  end
 def passageOfTime
   if @stuffInBelly > 0
     @stuffInBelly -= 1
