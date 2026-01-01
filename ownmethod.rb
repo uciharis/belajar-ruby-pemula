@@ -42,3 +42,5 @@ end
 
 say_mo_3 = say_moo(3)
 puts say_mo_3
+
+say_moo(9)
