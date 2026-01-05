@@ -75,6 +75,7 @@ p biodata_wowo[:rekor]
 
 =end
 
+=begin
 # kontrol alur
 count = 9
 if count > 10
@@ -84,3 +85,56 @@ elsif count == 3
 else
     puts 'masukkan nomor'
 end
+
+radiasi = 1000
+if radiasi > 800
+  puts 'bahaya'
+else
+  puts 'level aman'
+end
+
+# cara lain
+puts "bahaya dawg" if radiasi > 800
+
+# penggunaan while
+square = 10
+while square < 100
+  square *= square
+  puts square
+end
+square += 10 while square < 80
+puts square
+
+=end
+
+=begin
+
+# block dan iterators
+
+# block dan yield
+def call_block
+  yield
+  yield
+end
+
+call_block { puts 'halo dunia' }
+
+# penggunaan dengan iterator each dan parameter block
+kewan = %w{ kucing anjing burung ular }
+kewan.each do |hewan|
+  puts "ini adalah #{hewan}"
+end
+# atau
+kewan.each {|hewan| puts "ini adalah __#{hewan}__" }
+
+buah = ['apel', 'mangga', 'jeruk']
+buah.each do |item|
+  print item, '_____'
+end
+
+5.times {puts "###"}
+
+=end
+
+# format string
+printf "Number: %3.14f, strings: %s",1.22,"haio" 
