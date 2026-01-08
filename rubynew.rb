@@ -137,4 +137,7 @@ end
 =end
 
 # format string
-printf "Number: %3.14f, strings: %s",1.22,"haio" 
+printf "Number: %3.2f, strings: %s",1.2,"haio\n"
+printf "Number: %3.3f\n",1.6
+nama = "jokowi"
+printf "nama dia %s\n",nama
