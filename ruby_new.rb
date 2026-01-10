@@ -80,3 +80,31 @@ presiden_palsu = {
 print presiden_palsu
   
 =end
+
+=begin
+
+# kontrol struktur
+# if else dan while
+# unless dan until
+
+count = 4
+if count > 10
+  puts 'selamat kamu lolos'
+else
+  puts 'kamu gagal'
+end
+
+
+
+# if menggunakan statement modifier
+nilai = 33
+puts 'lulus ujian' if nilai >= 75 # logika identik dengan di bawah ini
+puts 'gagal ujian' unless nilai >= 75
+
+=end
+
+antrian = 0
+while antrian < 9
+    puts "nomor antrianmu : #{antrian+1}"
+    antrian += 1
+end
