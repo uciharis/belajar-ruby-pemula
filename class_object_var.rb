@@ -1,7 +1,6 @@
 =begin
 
 
-
 # Number
 nums = 8
 4.times do
@@ -26,13 +25,10 @@ puts
 
 # escape sequence
 print "that\'s right\n"
-
-
 =end
 
 =begin
 
-=end
 # membuat class dan method
 
 class Song
@@ -44,3 +40,14 @@ class Song
 end
 
 # @instance variabel memiliki ingatan utk simpan ke dalam objek
+joko_song = Song.new('jowi', 'jo woki', 12000)
+p joko_song # sama dengan puts joko_song.inspect
+
+=end
+
+class Song
+
+end
+
+lagu = Song.new('jowi', 'jowo', 1400) # tidak boleh ada spasi antara Song.new dan parameter
+p lagu
